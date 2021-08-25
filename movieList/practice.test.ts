@@ -3,12 +3,12 @@
 import { afterAll, beforeAll, test } from "@jest/globals"
 import { Builder, Capabilities, By } from "selenium-webdriver"
 
-const chromedriver = require('chromedriver')
+require('chromedriver')
 
 const driver = new Builder().withCapabilities(Capabilities.chrome()).build()
 
 beforeAll(async () => {
-    await driver.get(`http://localhost:5501/movieList/index.html`)
+    await driver.get(`http://localhost:5500/movieList/index.html`)
 })
 
 afterAll(async () => {
